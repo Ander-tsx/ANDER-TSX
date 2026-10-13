@@ -10,7 +10,7 @@ BG, BORDER, BAR = "#1b1d23", "#3a3d46", "#252830"
 FG, DIM, BOLD = "#d4d4d4", "#7f848e", "#ffffff"
 GREEN, BLUE, CYAN, YELLOW, MAGENTA, RED = "#6fc276", "#6ea8fe", "#5fc9d6", "#e5c07b", "#c678dd", "#e06c75"
 MONO = "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
-PROMPT = [("ander", GREEN), ("@", FG), ("MacBook-Pro", GREEN), (" ", FG), ("~", BLUE), (" % ", FG)]
+PROMPT = [("ander", GREEN), ("@", FG), ("MacBook-Air", GREEN), (" ", FG), ("~", BLUE), (" % ", FG)]
 W, FS, LH, PADX, TOP = 900, 15, 22, 28, 48
 
 GLYPHS = {
@@ -72,7 +72,7 @@ def row(a, b, c, d, w=36):
     return [(a, DIM), (b.ljust(w), FG), (c, DIM)]
 
 
-window("terminal", "ander — zsh — 100×50", [
+window("terminal", "ander — zsh — 100×40", [
     cmd("cat ander.txt"), None, "ART", None,
     [("Desarrollador Full-Stack", YELLOW)],
     [("Construyo experiencias digitales de valor.", FG)],
@@ -82,12 +82,6 @@ window("terminal", "ander — zsh — 100×50", [
     kv("age", "20"), kv("school", "UTEZ · Ing. en Desarrollo de Software"),
     kv("focus", "UX/UI · MERN · web interactiva (Three.js)"),
     kv("langs", "es (nativo) · en (B2)"), kv("since", "nov 2021 · coding non-stop"),
-    None,
-    cmd("cat stack.txt"),
-    kv("frontend", "React · Next.js · TypeScript · JavaScript · Tailwind CSS · Three.js", MAGENTA),
-    kv("backend", "Node.js · Express · Java", MAGENTA),
-    kv("data", "MongoDB · MySQL", MAGENTA),
-    kv("tools", "Git · GitHub · Postman · Figma · OAuth 2.0 · JWT", MAGENTA),
     None,
     cmd("git log --oneline --education"),
     [("2025 ago → presente  ", YELLOW), ("Ing. en Desarrollo de Software".ljust(38), FG), ("UTEZ", BLUE)],
@@ -100,10 +94,5 @@ window("terminal", "ander — zsh — 100×50", [
     [("CCNA-Switching-Routing-Wireless    ", BLUE), ("may 2024", DIM)],
     [("CCNA-Introduction-to-Networks      ", BLUE), ("dic 2023", DIM)],
     [("IT-Essentials-Cisco                ", BLUE), ("dic 2023", DIM)],
-    None,
-    cmd("cat links.txt"),
-    kv("web", "ander.icu", GREEN), kv("github", "github.com/Ander-tsx", GREEN),
-    kv("linkedin", "linkedin.com/in/ander-tsx", GREEN), kv("x", "x.com/Ander_tsx", GREEN),
-    kv("email", "andres.one.dev@gmail.com", GREEN),
     None, PROMPT + [("█", FG)],
 ])
