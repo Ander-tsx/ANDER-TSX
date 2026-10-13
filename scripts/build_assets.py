@@ -4,8 +4,10 @@ from pathlib import Path
 OUT = Path(__file__).resolve().parent.parent / "assets"
 OUT.mkdir(exist_ok=True)
 
-BG, PANEL, LINE = "#0a0d14", "#10141e", "#232a3b"
-TS, CYAN, MINT, AMBER, PINK, DIM, TXT = "#3178c6", "#61dafb", "#7ee787", "#ffb454", "#ff7eb6", "#6b7690", "#c9d3ea"
+BG, PANEL, LINE = "#0d0d0d", "#121212", "#2a2a2a"
+TS, CYAN, MINT, AMBER, PINK, DIM, TXT = "#8a8a8a", "#f0f0f0", "#bdbdbd", "#d6d6d6", "#a8a8a8", "#707070", "#d0d0d0"
+PROMPT = "ander@MacBook-Pro ~ % "
+LIGHTS = '<circle cx="{x}" cy="{y}" r="6" fill="#3a3a3a"/><circle cx="{x2}" cy="{y}" r="6" fill="#3a3a3a"/><circle cx="{x3}" cy="{y}" r="6" fill="#3a3a3a"/>'
 MONO = "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
 
 FONT = {
@@ -71,32 +73,32 @@ def banner():
 </style>
 <rect width="960" height="340" fill="{BG}"/>
 <g clip-path="url(#card)">
-  <rect x="8" y="8" width="944" height="324" fill="url(#grid)"/>
+  <rect x="8" y="49" width="944" height="283" fill="url(#grid)"/>
   <rect class="sweep" x="8" y="0" width="944" height="90" fill="url(#scan)"/>
 </g>
 <rect x="8" y="8" width="944" height="324" rx="16" fill="none" stroke="url(#edge)" stroke-width="2"/>
-<text class="boot b1" x="32" y="40" font-size="13" fill="{DIM}">$ boot ander.tsx --mode=fullstack</text>
-<text class="boot b2" x="32" y="60" font-size="13" fill="{MINT}">[ ok ] ui · ux · react · next · node · mongo</text>
-<text class="boot b3" x="32" y="80" font-size="13" fill="{MINT}">[ ok ] coding non-stop since 2021</text>
-<text x="928" y="40" font-size="13" fill="{MINT}" text-anchor="end">● SYSTEM ONLINE</text>
-<g class="glow" transform="translate({ox:.0f},112)" filter="url(#glow)">{ander}{tsx}</g>
+<path d="M8 48H952" stroke="{LINE}"/>
+{LIGHTS.format(x=32,y=29,x2=54,x3=76)}
+<text x="480" y="34" font-size="13" fill="{DIM}" text-anchor="middle">ander — zsh — 96×24</text>
+<text class="boot b1" x="32" y="76" font-size="14" fill="{DIM}" xml:space="preserve">{PROMPT}<tspan fill="{TXT}">./ander.tsx</tspan></text>
+<g class="glow" transform="translate({ox:.0f},120)" filter="url(#glow)">{ander}{tsx}</g>
 <g class="sub">
-  <text x="480" y="270" font-size="22" fill="{TXT}" text-anchor="middle" font-weight="700">&lt; Desarrollador Full-Stack /&gt;</text>
-  <text x="480" y="300" font-size="15" fill="{DIM}" text-anchor="middle">Construyo experiencias digitales de valor<tspan class="cur" fill="{AMBER}">▌</tspan></text>
+  <text x="480" y="272" font-size="20" fill="{TXT}" text-anchor="middle" font-weight="700">Desarrollador Full-Stack</text>
+  <text x="480" y="300" font-size="15" fill="{DIM}" text-anchor="middle">Next.js · React · Node.js · MongoDB<tspan class="cur" fill="{AMBER}">▌</tspan></text>
 </g>
 </svg>'''
 
 
 def whoami():
     lines = [  # (y, items, delay)
-        (74, [("❯ ", CYAN, 700), ("whoami", TXT, 700)], 0.2),
-        (104, [("ander", AMBER, 700), (" — ", DIM, 400), ("Full-Stack Developer · estudiante de ingeniería", TXT, 400)], 1.0),
-        (134, [("age        ", DIM, 400), ("20", MINT, 400)], 1.8),
-        (160, [("school     ", DIM, 400), ("UTEZ · Ing. en Desarrollo de Software", CYAN, 400)], 2.3),
-        (186, [("focus      ", DIM, 400), ("UX/UI · MERN · web interactiva (Three.js)", PINK, 400)], 2.8),
-        (212, [("langs      ", DIM, 400), ("es (nativo) · en (B2)", TXT, 400)], 3.3),
-        (254, [("❯ ", CYAN, 700), ("status", TXT, 700)], 4.0),
-        (284, [("● ", MINT, 400), ("abierto a proyectos y colaboraciones", MINT, 400)], 4.7),
+        (74, [(PROMPT, DIM, 400), ("whoami", TXT, 700)], 0.2),
+        (104, [("ander", CYAN, 700), (" — Full-Stack Developer · estudiante de ingeniería", TXT, 400)], 1.0),
+        (134, [("age     ", DIM, 400), ("20", TXT, 400)], 1.8),
+        (160, [("school  ", DIM, 400), ("UTEZ · Ing. en Desarrollo de Software", TXT, 400)], 2.3),
+        (186, [("focus   ", DIM, 400), ("UX/UI · MERN · web interactiva (Three.js)", TXT, 400)], 2.8),
+        (212, [("langs   ", DIM, 400), ("es (nativo) · en (B2)", TXT, 400)], 3.3),
+        (254, [(PROMPT, DIM, 400), ("echo $TAGLINE", TXT, 700)], 4.0),
+        (284, [("Construyo experiencias digitales de valor.", TXT, 400)], 4.7),
     ]
     out = []
     for i, (y, items, d) in enumerate(lines):
@@ -119,11 +121,11 @@ def whoami():
   @keyframes blink{{50%{{opacity:0}}}}
 </style>
 <rect x="4" y="4" width="952" height="322" rx="14" fill="{PANEL}" stroke="url(#edge)" stroke-width="2"/>
-<circle cx="32" cy="30" r="6" fill="{PINK}"/><circle cx="54" cy="30" r="6" fill="{AMBER}"/><circle cx="76" cy="30" r="6" fill="{MINT}"/>
-<text x="100" y="35" font-size="14" fill="{DIM}">~/ander.tsx — zsh</text>
+{LIGHTS.format(x=32,y=30,x2=54,x3=76)}
+<text x="480" y="35" font-size="13" fill="{DIM}" text-anchor="middle">ander — zsh — 96×24</text>
 <path d="M4 48H956" stroke="{LINE}"/>
 {"".join(out)}
-<text class="cur" x="36" y="314" font-size="17" fill="{AMBER}">▌</text>
+<text x="36" y="314" font-size="17" fill="{DIM}" xml:space="preserve">{PROMPT}<tspan class="cur" fill="{TXT}">▌</tspan></text>
 </svg>'''
 
 
@@ -146,10 +148,10 @@ def footer():
   .cur{{animation:blink 1s steps(1) infinite}}@keyframes blink{{50%{{opacity:0}}}}
 </style>
 <path class="w" d="M0 30H220l14-14 14 28 14-28 14 14H440l12-12 12 24 12-24 12 12H960" fill="none" stroke="url(#g)" stroke-width="2.5"/>
-<text x="480" y="72" font-size="14" fill="{DIM}" text-anchor="middle">$ exit 0  ·  gracias por pasar<tspan class="cur" fill="{AMBER}"> ▌</tspan></text>
+<text x="480" y="72" font-size="14" fill="{DIM}" text-anchor="middle">ander@MacBook-Pro ~ % exit<tspan class="cur" fill="{TXT}"> ▌</tspan></text>
 </svg>'''
 
 
-for name, fn in [("banner", banner), ("whoami", whoami), ("divider", divider), ("footer", footer)]:
+for name, fn in [("banner", banner), ("whoami", whoami), ("footer", footer)]:
     (OUT / f"{name}.svg").write_text(fn(), encoding="utf-8")
     print("wrote", name)
