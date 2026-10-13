@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 90" width="960" height="90" role="img" aria-label="ander.tsx">
+<defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="#3178c6"/><stop offset=".5" stop-color="#61dafb"/><stop offset="1" stop-color="#ffb454"/></linearGradient></defs>
+<style>
+  text{font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace}
+  .w{stroke-dasharray:960;stroke-dashoffset:960;animation:dash 4s ease-in-out infinite alternate}
+  @keyframes dash{to{stroke-dashoffset:0}}
+  .cur{animation:blink 1s steps(1) infinite}@keyframes blink{50%{opacity:0}}
+</style>
+<path class="w" d="M0 30H220l14-14 14 28 14-28 14 14H440l12-12 12 24 12-24 12 12H960" fill="none" stroke="url(#g)" stroke-width="2.5"/>
+<text x="480" y="72" font-size="14" fill="#6b7690" text-anchor="middle">$ exit 0  ·  gracias por pasar<tspan class="cur" fill="#ffb454"> ▌</tspan></text>
+</svg>

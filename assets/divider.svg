@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 24" width="960" height="24" role="presentation">
+<defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="#3178c6" stop-opacity="0"/><stop offset=".5" stop-color="#61dafb"/><stop offset="1" stop-color="#ffb454" stop-opacity="0"/></linearGradient></defs>
+<style>.d{animation:m 3s linear infinite}@keyframes m{from{transform:translateX(-80px)}to{transform:translateX(960px)}}</style>
+<path d="M0 12H960" stroke="url(#g)" stroke-width="2" opacity=".6"/>
+<path class="d" d="M0 12H80" stroke="#61dafb" stroke-width="4" stroke-linecap="round" opacity=".9"/>
+</svg>
