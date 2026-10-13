@@ -1,12 +1,4 @@
-<p align="center"><img src="assets/term-banner.svg" width="900" alt="ander@MacBook-Pro ~ % cat ander.txt — Ander.tsx, Desarrollador Full-Stack"></p>
-
-<p align="center"><img src="assets/term-whoami.svg" width="900" alt="ander@MacBook-Pro ~ % whoami"></p>
-
-<p align="center"><img src="assets/term-stack.svg" width="900" alt="ander@MacBook-Pro ~ % cat stack.txt"></p>
-
-<p align="center"><img src="assets/term-edu.svg" width="900" alt="ander@MacBook-Pro ~ % git log --oneline --education"></p>
-
-<p align="center"><img src="assets/term-links.svg" width="900" alt="ander@MacBook-Pro ~ % cat links.txt"></p>
+<p align="center"><img src="assets/terminal.svg" width="900" alt="Terminal de Ander: Ander.tsx, Desarrollador Full-Stack. Stack: React, Next.js, TypeScript, Node.js, Express, MongoDB. Estudiante en UTEZ."></p>
 
 <p align="center">
   <a href="https://ander.icu">web</a> ·
